@@ -1,45 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Grundläggande stilar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Headlines - A modern responsive website for news articles.">
-    <title>Headlines</title>
-    <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="styles.css">
-</head>
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
 
-<body>
-    <header>
-        <h1>Headlines - The Lorem Ipsum</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="#" class="button-link">Headlines</a></li>
-                <li><a href="#" class="button-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="content">
-            <h2>Dog saves child</h2>
-            <img src="img/retriever.webp" alt="A dog in a field" class="responsive-image">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis leo vitae dolor feugiat placerat
-                ut ut nulla. Praesent ut metus felis.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis leo vitae dolor feugiat placerat
-                ut ut nulla. Praesent ut metus felis.</p>
+/* Flexbox layout */
+.content {
+    display: flex;
+    flex-direction: column; /* Default: Visa bilderna under varandra */
+    gap: 2rem; /* Avstånd mellan sektionerna */
+    padding: 1rem;
+}
 
-            <h2>Fusion works</h2>
-            <img src="img/fusion.webp" alt="Fusion energy concept" class="responsive-image">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis leo vitae dolor feugiat placerat
-                ut ut nulla. Praesent ut metus felis.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis leo vitae dolor feugiat placerat
-                ut ut nulla. Praesent ut metus felis.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&#9728; London 19&#176;</p>
-    </footer>
-</body>
+.article {
+    display: flex;
+    flex-direction: column; /* Visa bild och text i en kolumn */
+    align-items: center;
+    text-align: center;
+}
 
-</html>
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Media queries för större skärmar */
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row; /* Visa bilderna bredvid varandra */
+        justify-content: space-around; /* Jämnt fördelat utrymme */
+    }
+
+    .article {
+        flex: 1; /* Låter varje artikel fylla lika mycket utrymme */
+        max-width: 45%; /* Begränsar bredden på varje sektion */
+        text-align: left;
+    }
+
+    .responsive-image {
+        max-width: 100%; /* Gör bilderna anpassade till innehållet */
+    }
+}
