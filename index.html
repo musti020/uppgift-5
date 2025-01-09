@@ -6,14 +6,12 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
-
 header {
     background-color: #0077b6;
     color: white;
     padding: 1rem;
     text-align: center;
 }
-
 /* Flexbox layout */
 .content {
     display: flex;
@@ -21,33 +19,28 @@ header {
     gap: 2rem; /* Avstånd mellan sektionerna */
     padding: 1rem;
 }
-
 .article {
     display: flex;
     flex-direction: column; /* Visa bild och text i en kolumn */
     align-items: center;
     text-align: center;
 }
-
 .responsive-image {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
-
 /* Media queries för större skärmar */
 @media (min-width: 768px) {
     .content {
         flex-direction: row; /* Visa bilderna bredvid varandra */
         justify-content: space-around; /* Jämnt fördelat utrymme */
     }
-
     .article {
         flex: 1; /* Låter varje artikel fylla lika mycket utrymme */
         max-width: 45%; /* Begränsar bredden på varje sektion */
         text-align: left;
     }
-
     .responsive-image {
         max-width: 100%; /* Gör bilderna anpassade till innehållet */
     }
