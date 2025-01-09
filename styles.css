@@ -1,110 +1,75 @@
-/* CSS Stylesheet */
-
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* General Reset */
-* {
+/* Grundläggande stilar */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f1de;
-    /* Light cream */
-    color: #3d405b;
-    /* Dark blue-gray */
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
+    background-color: #0077b6;
+    color: white;
+    padding: 1rem;
     text-align: center;
-    background-color: #81b29a;
-    /* Soft green */
-    color: #ffffff;
-    width: 100%;
-    padding: 20px 0;
-    font-size: 1.5rem;
 }
 
 .menu {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 1rem;
 }
 
-.menu .button-link {
+.button-link {
     text-decoration: none;
-    padding: 10px 20px;
-    background-color: #e07a5f;
-    /* Coral */
+    background-color: #023e8a;
     color: white;
-    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
 }
 
-.menu .button-link:hover {
-    background-color: #3d405b;
-    /* Dark blue-gray hover effect */
+.button-link:hover {
+    background-color: #00b4d8;
 }
 
-main {
-    max-width: 600px;
+/* Flexbox layout */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin-top: 20px;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #3d405b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .responsive-image {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 5px;
-    margin: 15px 0;
+    border-radius: 10px;
 }
 
-footer {
-    text-align: center;
-    background-color: #81b29a;
-    color: #ffffff;
-    width: 100%;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-}
-
-/* Media Query for Desktop */
-@media screen and (min-width: 768px) {
-    main {
-        max-width: 900px;
-        text-align: left;
+/* Media queries för större skärmar */
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-    header {
-        font-size: 2rem;
+    .article {
+        max-width: 45%;
         text-align: left;
-        padding: 20px 50px;
-    }
-
-    .menu {
-        justify-content: flex-start;
-        padding-left: 50px;
     }
 }
