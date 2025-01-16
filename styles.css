@@ -1,170 +1,56 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-    font-weight: normal;
-}
-
-/* Framsidan storlekar, bredden, höjden osv */
-.container {
-    background-color:
-        #fe7a7a;
-    margin: 0 auto;
-    width: 80vw;
-    max-width: 1600px;
-}
-
-/* Detta är redigeringen till små columerna, Contact,headline */
+/* Header och navigering */
 header {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(0, 0, 0);
-    color: #fe7a7a;
-    padding-bottom: 30px;
-    align-items: center;
+    background-color: #79c1e8;
+    color: white;
+    padding: 1rem;
     text-align: center;
 }
 
-/* 'Avståndet mellan culomerna och längden av ytan där uppe */
-header nav {
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding-top: 20px;
+    justify-content: center;
+    gap: 2rem;
 }
 
-/* Längden av columerna samt färgen */
-header nav a {
-    padding: 9px;
-    border-radius: 25px;
-    background-color: #e8d7ca;
+.button-link {
+    background-color: #000000;
+    color: rgb(181, 224, 243);
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    color: black;
-    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-/* Frägerna på columerna när du trycker på dom */
-header nav a:hover {
-    background-color: white;
-    color: rgb(252, 172, 172);
+.button-link:hover {
+    background-color: #000000;
 }
 
-/* Headlines (start) */
-/* Texten osv */
-article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 15px auto;
-    max-width: 80%;
-    gap: 3px;
-    padding-top: 10px;
+/* Bilder och innehåll */
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
-.image {
-    max-width: 80%;
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-p {
-    max-width: 80%;
-}
-
-/* Headlines (end) */
-
-/* Contact (start) */
-form {
-    width: 90%;
-    margin: 0 auto;
-    gap: 5px;
-}
-
-/* redigering av contact hemsidan, bredd och längen */
-fieldset {
-    width: 80%;
-    margin: 15px auto;
-    padding: 6px;
-}
-
-/* Avtåndet mellan person uppgifter */
-.personalf {
-    padding: 6%;
-}
-
-.customf {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-}
-
-.boxanswere {
-    display: flex;
-    flex-direction: row;
-}
-
-label {
-    padding: 5px;
-}
-
-.submit-button-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5px;
-}
-
-/* Submit knappens redigering */
-.submit-button {
-    width: 20%;
-    min-width: 50px;
-    background-color: white;
-}
-
-/* Submitt knappens färg när man klickar på den */
-.submit-button:hover {
-    background-color: rgb(144, 243, 144);
-}
-
-/* Contact (end) */
-
-/* Färgen på New York texten */
-footer {
-    background-color: black;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 7vh;
-}
-
-img[src="sun.png"] {
-    height: 80%;
-}
-
-@media (min-width: 600px) {
-
-    header nav {
-        flex-direction: row;
+/* Media Queries för större skärmar */
+@media (min-width: 768px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
 
-    .article-div {
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        margin: 0px 20px 10px 20px;
-    }
-
-    form {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .submit-button-container {
-        display: flex;
-        justify-self: center;
-        margin-bottom: 5px;
+    .content img {
+        max-width: 100%;
+        border-radius: 10px;
     }
 }
