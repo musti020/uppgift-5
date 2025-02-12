@@ -65,7 +65,7 @@ header {
 
     .content img {
         max-width: 100%;
-        border-radius: 10px;
+        border-radius: 20px;
     }
 }
 
@@ -73,10 +73,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 200vh;
     /* Gör sektionen lika hög som skärmen */
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     /* Öka textstorleken */
     background-color: #f0f8ff;
     /* Valfri bakgrundsfärg */
@@ -89,7 +89,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 200vh;
     /* Gör sektionen lika hög som skärmen */
     text-align: center;
     font-size: 3rem;
