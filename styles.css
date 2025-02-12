@@ -1,5 +1,5 @@
 header {
-    background-color: #79c1e8;
+    background-color: #d2940d;
     color: white;
     padding: 2rem;
     text-align: center;
@@ -65,7 +65,7 @@ header {
 
     .content img {
         max-width: 100%;
-        border-radius: 20px;
+        border-radius: 10px;
     }
 }
 
