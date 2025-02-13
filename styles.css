@@ -1,12 +1,13 @@
 header {
-    background-color: #a57f2c;
-    color: white;
+    background-color: #0432ca;
+    color: rgb(255, 255, 255);
     padding: 2rem;
     text-align: center;
     font-size: 2rem;
     display: flex;
-    flex-direction: column; /* Gör att innehållet staplas */
-    align-items: center;
+    flex-direction: column;
+    /* Gör att innehållet staplas */
+    align-items: column;
     height: 20vh;
     margin: 0;
 }
@@ -22,7 +23,7 @@ header {
 
 .button-link {
     background-color: #000000;
-    color: rgb(181, 224, 243);
+    color: rgb(255, 255, 255);
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
@@ -31,7 +32,7 @@ header {
 }
 
 .button-link:hover {
-    background-color: #333333;
+    background-color: #ff0000;
 }
 
 /* Innehåll */
@@ -41,13 +42,13 @@ header {
     gap: 1.5rem;
     padding: 1rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .content img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 /* Större skärmar */
@@ -64,8 +65,8 @@ header {
     align-items: center;
     height: 100vh;
     text-align: center;
-    font-size: 2rem;
-    background-color: #f9f9f9;
-    color: #333;
+    font-size: 5rem;
+    background-color: #eb0a0a;
+    color: #000000;
     padding: 2rem;
 }
