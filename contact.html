@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact page for Responsive Headlines">
+    <title>Contact - Responsive Headlines</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 75vh;
+            margin: 100;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        form {
+            display: center;
+            flex-direction: center;
+            align-items: center;
+        }
+
+        label,
+        input,
+        select,
+        button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: #000000;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Contact - Responsive Headlines</h1>
+        <nav>
+            <ul class="menu" style="list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center;">
+                <li><a href="index.html" class="button-link">Headlines</a></li>
+                <li><a href="contact.html" class="button-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="POST" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select one</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="se">Sweden</option>
+                    <option value="de">Germany</option>
+                </select>
+
+                <label for="department">What department do you want to contact?</label>
+                <div>
+                    <input type="checkbox" id="news" name="department[]" value="news">
+                    <label for="news">News</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="sports" name="department[]" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+
+                <label>Do you want a reply?</label>
+                <div>
+                    <input type="radio" id="yes" name="reply" value="yes" required>
+                    <label for="yes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="no" name="reply" value="no">
+                    <label for="no">No</label>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&#9728; London 19&#176;</p>
+    </footer>
+</body>
+
+</html>
